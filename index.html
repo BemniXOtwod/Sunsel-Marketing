@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/keyframes.css" />
+    <title>Sunsel Realestate Marketing</title>
+    <link rel="icon" href="img/sunsel favicon.jpg" type="image/x-icon">
+  </head>
+  <style>
+    /* Carousel container */
+    .carousel {
+      width: 50%; /* Width of the carousel */
+      margin: auto; /* Center the carousel */
+      overflow: hidden; /* Hide overflow */
+      position: relative; /* For positioning the controls */
+  }
+
+  /* Carousel tracks */
+  .carousel-images {
+      display: flex; /* Flexbox for horizontal arrangement */
+      transition: transform 0.5s ease; /* Transition effect */
+      width: 100%; /* Full width */
+  }
+
+  /* Individual image */
+  .carousel-images img {
+      width: 100%; /* Full width of the carousel */
+      max-width: 100%; /* Ensure images don't exceed their container */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Navigation buttons */
+  .carousel-button {
+      position: absolute; /* Position buttons inside the carousel */
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Center vertically */
+      background-color: rgb(250,150,2); /* White background */
+      border: none; /* No border */
+      padding: 20px; /* Padding */
+      cursor: pointer; /* Pointer cursor */
+      z-index: 10; /* Ensure buttons appear above images */
+  }
+  .carousel-button:hover{
+    transform: scale(1.5)
+  }
+
+  .prev {
+      left: 10px; /* Position left */
+  }
+
+  .next {
+      right: 10px; /* Position right */
+  }
+
+  </style>
+  <body>
+    
+    <header class="header container">
+      <nav class="header-nav">
+        <a class="header-nav-logo" href="#"
+          ><img style="height: 100px;" class="logo" src="img/sunsel logo.png" alt=""
+        /></a>
+        <ul class="navbar">
+          <li class="navbar-item">
+            <a class="navbar-link active" href="">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#locations">Locations</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#about">About Us</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#Ads">Advertisement </a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="intro-sect">
+      <div class="container">
+        <div class="intro-sect-inner">
+          <div class="intro-sect-text-block">
+            <h1 class="h1">
+              ህልምዎን ፣ ደስታዎን
+              እና ቤትዎን በአንድ ላይ
+              ከሰንሰል            </h1>
+            <p class="text">
+              እንደ ታማኝ ወኪሎች፣ ልዩ በሆነ ዲዛይን፣
+              በጥራት፣ በተመጣጣኝ ዋጋ፣ በተለያዩ የክፍያ
+              አማራጮች እና ሰርቶ በማስረከብ የሚታወቁ ልዩ
+              አፓርታማዎችን በማሻሻጥ ላይ እንሰራለን።
+              ትክክለኛውን ምርጫ በማጣት የተቸገሩትን
+              በማገልገል ደስተኞች ነን፤ በሪል እስቴት አለም
+              ልዩነት እናመጣለን።
+            </p>
+            <form class="intro-subsribe-form" action="mailto:Sunselmarketing@gmail.com" method="POST" enctype="text/plain">
+              <input
+                  class="intro-subscribe-input"
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+              />
+              <input class="btn" type="submit" value="Email us" />
+          </form>
+          </div>
+          <div class="intro-sect-img">
+            <img class="intro-pic" src="img/aa5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- 
+    <section class="logo-sect container">
+      <div class="logo-item">
+        <div class="logo-icon">
+          <img
+            src="icons/logoipsum/Combined_shape.svg"
+            alt="logo"
+            class="logo-icon-icon"
+          />
+        </div>
+        <div class="logo-text">
+          <img
+            src="icons/logoipsum/Logoipsum_regular.svg"
+            alt=""
+            class="logo-text-icon"
+          />
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-icon">
+          <img
+            src="icons/logoipsum/lines.svg"
+            alt="logo"
+            class="logo-icon-icon"
+          />
+        </div>
+        <div class="logo-text">
+          <img
+            src="icons/logoipsum/Logoipsum_narrow.svg"
+            alt=""
+            class="logo-text-icon"
+          />
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-icon">
+          <img
+            src="icons/logoipsum/Triangle.svg"
+            alt="logo"
+            class="logo-icon-icon"
+          />
+        </div>
+        <div class="logo-text">
+          <img
+            src="icons/logoipsum/Logoipsum_wide.svg"
+            alt=""
+            class="logo-text-icon"
+          />
+        </div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-icon">
+          <img
+            src="icons/logoipsum/Star.svg"
+            alt="logo"
+            class="logo-icon-icon"
+          />
+        </div>
+        <div class="logo-text">
+          <img
+            src="icons/logoipsum/Logoipsum_bold.svg"
+            alt=""
+            class="logo-text-icon"
+          />
+        </div>
+      </div>
+    </section> -->
+
+   
+    <section id="locations" style="padding: 20px; text-align: center;">
+      <br><br><br>
+      
+      <h2 style="color: rgb(247,132,52);">Featured Locations in Addis Ababa</h2>
+      <br><br><br>
+
+
+      <div class="location-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+          
+          <div class="location" style="position: relative; width: 30%;">
+              <img src="img/bole.jpg" 
+                   alt="ቦሌ" style="width: 100%; border-radius: 10px;">
+              <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: rgba(0, 0, 0, 0.5); 
+                                            color:rgb(255, 255, 255); 
+                                            display: flex; 
+                                            align-items: center; 
+                                            justify-content: center; 
+                                            border-radius: 10px;
+                                            font-size: 24px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;">ቦሌ
+              </div>
+          </div>
+  
+          <div class="location" style="position: relative; width: 30%;">
+              <img src="img/bisrate.jpg" 
+                   alt="ብስራተ ገብርኤል" style="width: 100%; border-radius: 10px;">
+              <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: rgba(0, 0, 0, 0.5); 
+                                            color: white; 
+                                            display: flex; 
+                                            align-items: center; 
+                                            justify-content: center; 
+                                            border-radius: 10px;
+                                            font-size: 24px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;">ብስራተ ገብርኤል
+              </div>
+          </div>
+  
+          <div class="location" style="position: relative; width: 30%;">
+              <img src="img/gerji.jpg" 
+                   alt="ገርጂ" style="width: 100%; border-radius: 10px;">
+              <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: rgba(0, 0, 0, 0.5); 
+                                            color: white; 
+                                            display: flex; 
+                                            align-items: center; 
+                                            justify-content: center; 
+                                            border-radius: 10px;
+                                            font-size: 24px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;">ገርጂ
+              </div>
+          </div>
+  
+          <div class="location" style="position: relative; width: 30%;">
+              <img src="img/cmc.jpg" 
+                   alt="CMC የተባበሩት" style="width: 100%; border-radius: 10px;">
+              <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: rgba(0, 0, 0, 0.5); 
+                                            color: white; 
+                                            display: flex; 
+                                            align-items: center; 
+                                            justify-content: center; 
+                                            border-radius: 10px;
+                                            font-size: 24px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;">CMC የተባበሩት
+              </div>
+          </div>
+  
+          <div class="location" style="position: relative; width: 30%;">
+              <img src="img/lemi.jpg" 
+                   alt="ለሚኩራ" style="width: 100%; border-radius: 10px;">
+              <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: rgba(0, 0, 0, 0.5); 
+                                            color: white; 
+                                            display: flex; 
+                                            align-items: center; 
+                                            justify-content: center; 
+                                            border-radius: 10px;
+                                            font-size: 24px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;">ለሚኩራ
+              </div>
+          </div>
+  
+          <div class="location" style="position: relative; width: 30%;">
+              <img src="img/addis.jpg" 
+                   alt="ሌሎችም " style="width: 100%; border-radius: 10px;">
+              <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                                            background: rgba(0, 0, 0, 0.5); 
+                                            color: white; 
+                                            display: flex; 
+                                            align-items: center; 
+                                            justify-content: center; 
+                                            border-radius: 10px;
+                                            font-size: 24px;
+                                            padding-top: 20px;
+                                            padding-bottom: 20px;">ሌሎችም 
+              </div>
+          </div>
+          
+      </div>
+  </section>
+
+  <br><br><br>
+  <section id="about">
+  <h1  class="h2" style="text-align:center; color: rgb(250,150,2);"> Our Social medias</h1>
+  <br><br>
+  <div style=" margin:10px;display: flex;justify-content: center;  ">
+    <a  href="https://www.facebook.com/p/Sunsel-Marketing-61555915221384/">
+        <img  style="margin:10px; height: 65px;" src="img/facebook.png" alt="Facebook" >
+    </a>
+    <a  href="https://www.linkedin.com/company/sunsel-marketing/posts/?feedView=all">
+        <img style="margin:10px; height: 65px;" src="img/linkedin.png" alt="linkdin">
+    </a>
+    <a  href="https://www.instagram.com/sunselmarketing/">
+        <img style="margin:10px; height: 65px;" src="img/instagram.png" alt="Instagram">
+    </a>
+    <a  href="https://www.tiktok.com/@sunsel.marketing">
+        <img style="margin:10px; height: 65px;" src="img/tiktok.png" alt="Tiktok">
+    </a>
+    <a  href="https://t.me/sunselmarketing">
+        <img style="margin:10px; height: 65px;" src="img/telegram.png" alt="Telegram">
+    </a>
+</div>
+  </section>
+<br>
+<section id="Ads"></section>
+<h1  class="h2" style="text-align:center; color: rgb(250,150,2);"> Advertises </h1>
+
+<br><br><br>
+<div class="carousel">
+  <div class="carousel-images">
+      <img src="img/image1.jpg" alt="Image 1">
+      <img src="img/image2.jpg" alt="Image 2">
+      <img src="img/image3.jpg" alt="Image 3">
+      <img src="img/image4.jpg" alt="Image 4">
+      <img src="img/image5.jpg" alt="Image 5">
+      <img src="img/image6.jpg" alt="Image 6">
+      <img src="img/image7.jpg" alt="Image 7">
+      <img src="img/image8.jpg" alt="Image 8">
+      <img src="img/image9.jpg" alt="Image 9">
+      <img src="img/image10.jpg" alt="Image 10">
+  </div>
+  <button class="carousel-button prev">❮</button>
+  <button class="carousel-button next">❯</button>
+</div>
+</section>
+<section class="choose">
+  <div class="container">
+    <h1 class="h2" style="color: rgb(250,150,2);">እኛ ጋር ሲመጡ
+      የምንሰጣቸው አገልግሎቶች</h1>
+    <div class="choose-line">
+      <div class="choose-item">
+        <div class="choose-item-round round1">
+          <!-- <img src="icons/choose/icon1.svg" alt="" class="choose-item-img"> -->
+        </div>
+        <h4 class="h4">እናማክሮታለን</h4>
+        
+      </div>
+      <div class="choose-item">
+        <div class="choose-item-round round2">
+          <!-- <img src="icons/choose/icon2_blue.svg" alt="" class="choose-item-img"> -->
+        </div>
+        <h4 class="h4">ለእርሶ የሚሆን ጥሩ
+          ምርጫ ያገኛሉ</h4>
+
+       
+      </div>
+      <div class="choose-item">
+        <div class="choose-item-round round3">
+          <!-- <img src="icons/choose/icon3.svg" alt="" class="choose-item-img"> -->
+        </div>
+        <h4 class="h4">ተጨማሪ ገቢ ማግኛ
+          መንገዶች</h4>
+        
+      </div>
+      <div class="choose-item">
+        <div class="choose-item-round round4">
+          <!-- <img src="icons/choose/icon4.svg" alt="" class="choose-item-img"> -->
+        </div>
+        <h4 class="h4">በቅልጥፍናችን እና
+          ታማኝነታችን ይኮራሉ</h4>
+       
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="start container">
+      <div class="blue">
+        <div class="start-text-block">
+          <h1 class="h1" style="color: beige;">ተልዕኮአችን</h1>
+          <p class="text">
+            ደንበኛን ማእከል ያደረገ ፣ ታማኝነትን መርሁ
+የሆነ አገልግሎት መስጠት ነው!
+          </p>
+          <a href="contact.html" class="btn">Contact us</a>
+          <a href="https://www.instagram.com/sunselmarketing/reel/DCZAxy4Ipr6/" class="btn inverse">
+            <div class="tringle"></div>
+            Watch now</a
+          >
+
+          <div class="round-gradient"></div>
+          <div class="round-gradient second"></div>
+          <div class="round-fill"></div>
+        </div>
+        <div class="start-left-part">
+          <!-- <div class="white-rectangle"> -->
+         
+          <!-- </div> -->
+        </div>
+      </div>
+    </section><br><br>
+    <section class="best-space container">
+      <div class="best-space-text-block">
+        <h2 class="h2">We provide best space for you!</h2>
+        <p class="text">
+          Enjoy comfort and elegance in your perfect location. We excel in both residential and commercial real estate markets to ensure you get the best. 
+        <p class="text">
+          Our personalized plans cater to your specific needs, turning your dreams into reality. Contact us and let’s make your vision come true!
+        </p>
+        </p>
+        <div class="best-space-btn"><a href="sunsel.pdf" class="btn"> Download pdf</a></div>
+      </div>
+      <div class="best-space-parent-for-overlay">
+        <img src="img/best-space-right.jpg" alt="" class="best-space-right" />
+        <div class="best-space-overlay">
+          <div class="left-col">
+            <div class="best-space-overlay-round">
+              <img
+                src="icons/building.svg"
+                alt="small building icon"
+                class="best-space-overlay-icon"
+              />
+            </div>
+          </div>
+          <div class="right-col">
+            <div class="best-space-overlay-heading">Throughout Addis </div>
+            <div class="best-space-overlay-text">
+              JUST ASK WHERE
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="img/best-space-left.jpg" alt="" class="best-space-left" />
+    </section>
+    <section class="serve">
+      <div class="container">
+        <h2 class="h2">Who do we serve?</h2>
+        <p class="text">
+          
+        </p>
+      </div>
+
+      <div class="container ">
+        <div class="serve-inner-block orange">
+          <img
+            src="icons/serve/buyers.svg"
+            alt=""
+            class="serve-inner-block-img"
+          />
+          <h2 class="h2">Buyers</h2>
+          <p class="text">
+          </p>
+          <a href="mailto:Sunselmarketing@gmail.com" class="btn inverse">Get started</a>
+        </div>
+        <div class="serve-inner-block">
+          <img
+            src="icons/serve/seller.svg"
+            alt=""
+            class="serve-inner-block-img"
+          />
+          <h2 class="h2">Seller</h2>
+          <p class="text">
+          </p>
+          <a href="mailto:Sunselmarketing@gmail.com" class="btn inverse">Get started</a>
+        </div>
+      </div>
+    </section>
+    <br><br><br>
+  
+
+    <!-- <section class="feedback container">
+      <div class="feedback-inner top">
+        <h2 class="h2">Thanks for your nice words to us</h2>
+        <p class="text">
+          Si sine causa, nollem me tamen laudandis maioribus meis corrupisti nec
+          voluptas
+        </p>
+      </div>
+      <div class="feedback-inner bottom">
+        <div class="feedback-item">
+          <div class="feedback-video">
+            <video class="feedback-video-file" muted controls>
+              <source
+                src="video/portrait.webm"
+                type="video/webm"
+              />
+              <source
+                src="video/042030350-barista-cafe-wine-bar-portrait.mp4"
+                type="video/mp4"
+              />
+
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+          <p class="text">
+            "Omne animal, simul atque integre iudicante itaque earum motus et."
+          </p>
+          <p class="feedback-person-name">Arend Pellewever</p>
+          <p class="feedback-city video">Baltimore</p>
+        </div>
+        <div class="feedback-item">
+          <div class="feedback-photo">
+            <img
+              src="img/feedback/Image2.jpg"
+              alt=""
+              class="feedback-photo-img"
+            />
+          </div>
+          <p class="text">
+            "In quo quaerimus, non emolumento aliquo, sed quia voluptas sit."
+          </p>
+          <p class="feedback-person-name">Leo Knight</p>
+          <p class="feedback-city">Cleveland</p>
+        </div>
+        <div class="feedback-item">
+          <div class="feedback-photo photo-with-pie">
+            <img
+              src="img/feedback/Image3.jpg"
+              alt=""
+              class="feedback-photo-img"
+            />
+            <div class="pie"></div>
+          </div>
+          <p class="text">
+            "In quo quaerimus, non emolumento aliquo, sed quia voluptas sit."
+          </p>
+          <p class="feedback-person-name">Lisanne Viscaal</p>
+          <p class="feedback-city">Lyon</p>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="contact">
+      <div class="contact-background">
+        <div class="container contact-inner">
+          <div class="contact-block-left">
+            <h2 class="h2">Get experience from the expert</h2>
+            <p class="text">
+              We are always available to assist you
+            </p>
+            <a href="contact.html" class="btn inverse">Contact us</a>
+          </div>
+          <div class="contact-block-right">
+            <div class="contact-circle"></div>
+            <img src="img/woman.png" alt="" class="contact-woman-photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container flex-container">
+        <div class="footer-col1">
+          <a href="#"><img class="logo" src="img/sunsel logo 2.png" alt="" /></a>
+          <p class="text" style="font-size: larger;">
+          <b>  አፓርትመንት እና
+            ሱቆችን ለሽያጭ
+            አቅርበናል</b>          </p>
+          <div class="social-icons">
+            <div class="social-icon-item facebook">
+              <div class="tooltip">Facebook</div>
+              <a href="https://web.facebook.com/p/Sunsel-Marketing-61555915221384/?_rdc=1&_rdr" class="social-link"
+                ><img
+                  src="icons/social/Facebook.svg"
+                  alt=""
+                  class="social-link-img"
+              /></a>
+            </div>
+      
+        
+            <div class="social-icon-item linkedin">
+              <div class="tooltip">Linkedin</div>
+              <a href="https://www.linkedin.com/company/sunsel-marketing/posts/?feedView=all" class="social-link"
+                ><img
+                  src="icons/social/Linkedin.svg"
+                  alt=""
+                  class="social-link-img"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col-normal">
+          <h5 class="h5">Location</h5>
+          <p class="footer-link"><a href="">	ቦሌ ኤድና ሞል ሃርመኒ ሆቴል ፊት ለፊት,
+            ኤል ጂ ህንጻ 6ተኛ ፎቅ</a></p>
+
+        </div>
+        <div class="footer-col-normal">
+          <h5 class="h5">Contact</h5>
+          
+          <p class="footer-link"><a href="">0995579595 or 0912418540</a></p>
+          
+        </div>
+       
+       
+      </div>
+    </footer>
+    <script>
+      const images = document.querySelector('.carousel-images');
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+          const totalImages = images.children.length;
+          const offset = -currentIndex * 100; // 100% per image
+          images.style.transform = `translateX(${offset}%)`;
+      }
+
+      nextButton.addEventListener('click', () => {
+          const totalImages = images.children.length;
+          currentIndex = (currentIndex + 1) % totalImages; // Loop back to start
+          updateCarousel();
+      });
+
+      prevButton.addEventListener('click', () => {
+          const totalImages = images.children.length;
+          currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop to end
+          updateCarousel();
+      });
+
+  </script>
+
+  </body=>
+</html>

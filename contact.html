@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Contact Sunsel</title>
+   
+    <link rel="icon" href="img/sunsel favicon.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .floating-container {
+            position: fixed;
+            left: 20px; /* Distance from the left */
+            top: 21.5%; /* Center vertically */
+            transform: translateY(-50%); /* Center vertically */
+            z-index: 1000; /* Ensure it appears above other elements */
+           
+        }
+
+        /* Individual image links */
+        .floating-link {
+            display: block;
+            margin: 10px 0; /* Space between images */
+        }
+
+        .floating-link img {
+            width: 50px; /* Width of each image */
+            height: auto; /* Maintain aspect ratio */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+
+        .floating-link img:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+        /* Style for the floating button */
+        .floating-button {
+            position: fixed;
+            bottom: 20px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right */
+            width: 130px; /* Width of the button */
+            height: 70px; /* Height of the button */
+            background-image: url('path/to/your/image.png'); /* Path to the image */
+            background-size: cover; /* Ensures the image covers the button */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+            z-index: 1000; /* Ensure it appears above other elements */
+        }
+
+        .floating-button:hover {
+            opacity: 0.8; /* Slight transparency on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <div style="text-align: center;">
+           <a href="index.html"><img style=" height: 100px; border-radius: 25px; border:solid 15px rgb(211,60,2)" src="img/sunsel logo.png" alt=""></a> 
+
+        </div>
+        <div class="floating-container">
+            <a class="floating-link" href="https://www.facebook.com/p/Sunsel-Marketing-61555915221384/">
+                <img style="border-radius: 20px;" src="img/facebook.png" alt="Facebook">
+            </a>
+            <a class="floating-link" href="https://lnkd.in/eVrJHuEY">
+                <img style="border-radius: 20px;"src="img/linkedin.png" alt="linkdin">
+            </a>
+            <a class="floating-link" href="https://www.instagram.com/sunselmarketing/">
+                <img style="border-radius: 20px;" src="img/instagram.png" alt="Instagram">
+            </a>
+            <a class="floating-link" href="https://www.tiktok.com/@sunsel.marketing">
+                <img style="border-radius: 20px;" src="img/tiktok.png" alt="Tiktok">
+            </a>
+            <a class="floating-link" href="https://t.me/sunselmarketing">
+                <img style="border-radius: 20px;" src="img/telegram.png" alt="Telegram">
+            </a>
+        </div>
+<br>
+        <h1>Get in Touch</h1>
+        <p>Fill up the form to get in touch with us. </p>
+
+        <!-- Contact form section -->
+        <div class="contact-box">
+            <!-- Left side of the form -->
+            <div class="container-left">
+                <h3>Fill the Form*</h3>
+                <!-- Form -->
+                <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="input-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="phone">Phone*</label>
+                        <input type="text" id="phone" name="phone" placeholder="+251 9 123 456 78" required>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="ExampleEmail@gmail.com" required>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Inquiry">
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="message">Message*</label>
+                        <textarea rows="4" id="message" name="message" placeholder="Enter your Message" required></textarea>
+                    </div>
+                
+                    <input type="hidden" name="_replyto" value="Sunselmarketing@gmail.com"> <!-- Set reply-to email -->
+                
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+            <!-- Right side with contact information -->
+            <div class="container-right">
+                <h3>Reach Us</h3>
+                   <table>
+                    <tr>
+                        <td>Email: </td>
+                        <td>Sunselmarketing@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone: </td>
+                        <td>📞 +251 9 95 57 95 95</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> 📞 +251 9 12 41 85 40</td>
+                    </tr>
+
+                    <tr>
+                        <td>Address: </td>
+                        <td>ቦሌ ኤድና ሞል ሃርመኒ ሆቴል ፊት ለፊት,<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ኤል ጂ ህንጻ 6ተኛ ፎቅ 
+                           
+                    </tr>
+                </table>
+                
+                <!-- Map section -->
+                <div class="map">
+                    <!-- Google Map iframe -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.6919167780019!2d38.785822133298474!3d8.99601074436408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8524e6faed15%3A0xcf39a148cf6cd237!2sLG%20Metro%20Service%20Center%20Addis%20Ababa!5e1!3m2!1sen!2set!4v1733406012030!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="index.html"><img style=" height: 100px; border-radius: 25px; border:solid 15px rgb(211,60,2)" src="img/sunsel logo.png" alt=""></a> 
+       
+     </div>
+  
+     <a href="index.html"> <!-- Change this link to your homepage -->
+         <img src="img/back.png" class="floating-button"alt="">
+    </a>
+    <!-- JavaScript file -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
